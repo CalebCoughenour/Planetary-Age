@@ -3,7 +3,7 @@ import AgeObject from '../src/js/age-calculator.js';
 describe('ageObject', () => {
 
   test('should receive age input and save it in object', () => {
-  let age = new AgeObject(29);
+  let age = new AgeObject(29, 80);
   expect(age.age).toEqual(29);
   });
 });
@@ -12,7 +12,7 @@ describe('convertToEarthDays', () => {
   let age;
 
   beforeEach(() => {
-    age = new AgeObject(29);
+    age = new AgeObject(29, 80);
   });
 
   test('should receive age as input and save as age variable', () => {
@@ -36,7 +36,7 @@ describe('convertToMercuryAge', () => {
   let age;
 
   beforeEach(() => {
-    age = new AgeObject(29);
+    age = new AgeObject(29, 80);
   });
 
   test('should divide total days alive by days for Mercury rotation(88)', () => {
@@ -50,7 +50,7 @@ describe('convertToVenusAge', () => {
   let age;
 
   beforeEach(() => {
-    age = new AgeObject(29);
+    age = new AgeObject(29, 80);
   });
 
   test('should divide total days alive by days for Venus rotation(225)', () => {
@@ -64,7 +64,7 @@ describe('convertToMarsAge', () => {
   let age;
 
   beforeEach(() => {
-    age = new AgeObject(29);
+    age = new AgeObject(29, 80);
   });
 
   test('should divide total days alive by days for Mars rotation(686)', () => {

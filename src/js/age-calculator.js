@@ -1,8 +1,9 @@
 
 export default class AgeObject {
-  constructor(age) {
+  constructor(age, expect) {
     this.age = age;
     this.days = 0;
+    this.expectancy = expect;
   }
 
   convertToEarthDays() {
