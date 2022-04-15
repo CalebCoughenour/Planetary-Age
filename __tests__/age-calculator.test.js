@@ -67,9 +67,23 @@ describe('convertToMarsAge', () => {
     age = new AgeObject(29);
   });
 
-  test('should divide total days alive by days for Mars rotation(686.2', () => {
+  test('should divide total days alive by days for Mars rotation(686)', () => {
     age.convertToEarthDays();
     let marsAge = age.convertToMarsAge();
     expect(marsAge).toEqual(15);
+  });
+});
+
+describe('converToSaturnAge', () => {
+  let age;
+
+  beforeEach(() => {
+    age = new AgeObject(29);
+  });
+
+  test('should return message if Earth age is less than one Saturn year', () => {
+    age.convertToEarthDays();
+    let lessThanOneYear = age.convertToSaturnAge();
+    expect(lessThanOneYear).toEqual("You are less than one Saturn year old!");
   });
 });
