@@ -1,4 +1,4 @@
-import { lifeExpectancyCalculator, mercuryLifeExpectCalc } from '../src/js/life-expectancy.js';
+import { lifeExpectancyCalculator, mercuryLifeExpectCalc, venusLifeExpectCalc } from '../src/js/life-expectancy.js';
 import AgeObject from '../src/js/age-calculator.js';
 
 describe('lifeExpectancyCalculator', () => {
@@ -40,5 +40,12 @@ describe('lifeExpectancyCalculator', () => {
     let vAge = testAge.convertToVenusAge();
     let venusLifeLeft = venusLifeExpectCalc(vAge, 80);
     expect(venusLifeLeft).toEqual(33);
+  });
+
+  test('should output how many Venus years passed life expectancy a person is if their age is more than expectancy', () => {
+    newAge.convertToEarthDays();
+    let mAge = newAge.convertToVenusAge();
+    let venusLifeLeft = VenusLifeExpectCalc(mAge, 40);
+    expect(venusLifeLeft).toEqual("You have lived 7 years past your expectancy!");
   });
 });
