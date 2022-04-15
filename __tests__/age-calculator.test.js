@@ -40,7 +40,22 @@ describe('convertToMercuryAge', () => {
   });
 
   test('should divide total days alive by days for Mercury rotation(88)', () => {
+    age.convertToEarthDays();
     let mercuryAge = age.convertToMercuryAge();
     expect(mercuryAge).toEqual(120);
+  });
+});
+
+describe('convertToVenusAge', () => {
+  let age;
+
+  beforeEach(() => {
+    age = new AgeObject(29);
+  });
+
+  test('should divide total days alive by days for Venus rotation(225)', () => {
+    age.convertToEarthDays();
+    let venusAge = age.convertToVenusAge();
+    expect(venusAge).toEqual(47);
   });
 });
