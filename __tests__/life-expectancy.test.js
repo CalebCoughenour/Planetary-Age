@@ -58,8 +58,16 @@ describe('lifeExpectancyCalculator', () => {
   test('should output how many Venus years passed life expectancy a person is if their age is more than expectancy', () => {
     newAge.convertToEarthDays();
     let marsAge = newAge.convertToMarsAge();
-    let marsLifeLeft = marsLifeExpectCalc(marsAge, 60);
-    expect(marsLifeLeft).toEqual("You have lived 5 years past your expectancy!");
+    let marsLifeLeft = marsLifeExpectCalc(marsAge, 14);
+    expect(marsLifeLeft).toEqual("You have lived 1 years past your expectancy!");
+  });
+
+  test('should calculate how many years are left between life expectancy for Jupiter years', () => {   
+    let testAge = new AgeObject(60, 1); 
+    testAge.convertToEarthDays();
+    let jAge = testAge.convertToJupiterAge();
+    let jupiterLifeLeft = marsLifeExpectCalc(jAge, 1);
+    expect(jupiterLifeLeft).toEqual(1);
   });
 
 });
