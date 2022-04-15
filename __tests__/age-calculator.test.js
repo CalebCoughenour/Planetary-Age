@@ -1,10 +1,18 @@
 import AgeObject from '../src/js/age-calculator.js';
 
 describe('ageObject', () => {
+  let age;
+
+  beforeEach(() => {
+    age = new AgeObject(29, 80);
+  });
 
   test('should receive age input and save it in object', () => {
-  let age = new AgeObject(29, 80);
   expect(age.age).toEqual(29);
+  });
+
+  test('should receive life expectancy input and save it in object', () => {
+    expect(age.expectancy).toEqual(80);
   });
 });
 
