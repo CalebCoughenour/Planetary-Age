@@ -20,10 +20,11 @@ describe('lifeExpectancyCalculator', () => {
   });
 
   test('should calculate how many years are left between life expectancy for Mercury years', () => {
-    newAge.convertToEarthDays();
-    let mAge = newAge.convertToMercuryAge();
+    let testAge = new AgeObject(10, 80)
+    testAge.convertToEarthDays();
+    let mAge = testAge.convertToMercuryAge();
     let mercuryLifeLeft = mercuryLifeExpectCalc(mAge, 80);
-    expect(mercuryLifeLeft).toEqual(40);
+    expect(mercuryLifeLeft).toEqual(39);
   });
 
   test('should output how many Mercury years passed life expectancy a person is if their age is more than expectancy', () => {
@@ -31,5 +32,13 @@ describe('lifeExpectancyCalculator', () => {
     let mAge = newAge.convertToMercuryAge();
     let mercuryLifeLeft = mercuryLifeExpectCalc(mAge, 80);
     expect(mercuryLifeLeft).toEqual("You have lived 40 years past your expectancy!");
+  });
+
+  test('should calculate how many years are left between life expectancy for Venus years', () => {
+    let testAge = new AgeObject(29, 80)
+    testAge.convertToEarthDays();
+    let vAge = testAge.convertToVenusAge();
+    let venusLifeLeft = venusLifeExpectCalc(vAge, 80);
+    expect(venusLifeLeft).toEqual(33);
   });
 });
