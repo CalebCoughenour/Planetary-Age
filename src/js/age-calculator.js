@@ -12,6 +12,10 @@ export default class AgeObject {
     return totalEarthDays;
   }
 
+  convertToMercuryAge() {
+    let mercuryAge = Math.round(this.days / 88);
+    return mercuryAge;
+  }
   
 }
 
