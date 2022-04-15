@@ -12,6 +12,10 @@ export const lifeExpectancyCalculator = (age, expectancy) => {
 
 
 export const mercuryLifeExpectCalc = (mAge, expectancy) => {
-    let mercuryLifeLeft = (mAge - expectancy);
+    let mercuryLifeLeft = (expectancy - mAge);
+    if (mercuryLifeLeft < 0) {
+      let absMercLife = ("You have lived " + (Math.abs(mercuryLifeLeft)) + " years past your expectancy!");
+      return absMercLife;
+    }
     return mercuryLifeLeft;
 }
