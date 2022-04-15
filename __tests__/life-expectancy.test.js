@@ -63,10 +63,10 @@ describe('lifeExpectancyCalculator', () => {
   });
 
   test('should calculate how many years are left between life expectancy for Jupiter years', () => {   
-    let testAge = new AgeObject(60, 1); 
+    let testAge = new AgeObject(29, 1); 
     testAge.convertToEarthDays();
     let jAge = testAge.convertToJupiterAge();
-    let jupiterLifeLeft = jupiterLifeExpectCalc(jAge, 1);
+    let jupiterLifeLeft = jupiterLifeExpectCalc(jAge, 3);
     expect(jupiterLifeLeft).toEqual(1);
   });
 

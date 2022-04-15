@@ -37,3 +37,8 @@ export const marsLifeExpectCalc = (marsAge, expectancy) => {
   }
   return marsLifeLeft;
 }
+
+export const jupiterLifeExpectCalc = (jAge, expectancy) => {
+  let jupiterLifeLeft = (expectancy - jAge);
+  return jupiterLifeLeft;
+}
