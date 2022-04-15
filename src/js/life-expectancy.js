@@ -19,3 +19,8 @@ export const mercuryLifeExpectCalc = (mAge, expectancy) => {
     }
     return mercuryLifeLeft;
 }
+
+export const venusLifeExpectCalc = (vAge, expectancy) => {
+  let venusLifeLeft = (expectancy - vAge);
+  return venusLifeLeft;
+}
