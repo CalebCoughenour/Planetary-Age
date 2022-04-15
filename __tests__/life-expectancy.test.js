@@ -25,4 +25,11 @@ describe('lifeExpectancyCalculator', () => {
     let mercuryLifeLeft = mercuryLifeExpectCalc(mAge, 80);
     expect(mercuryLifeLeft).toEqual(40);
   });
+
+  test('should output how many Mercury years passed life expectancy a person is if their age is more than expectancy', () => {
+    newAge.convertToEarthDays();
+    let mAge = newAge.convertToMercuryAge();
+    let mercuryLifeLeft = mercuryLifeExpectCalc(mAge, 80);
+    expect(mercuryLifeLeft).toEqual("You have lived 40 years past your expectancy!");
+  });
 });
