@@ -2,9 +2,7 @@ import { lifeExpectancyCalculator, mercuryLifeExpectCalc, venusLifeExpectCalc, m
 import AgeObject from '../src/js/age-calculator.js';
 
 describe('lifeExpectancyCalculator', () => {
-
   let newAge;
-
   beforeEach(() => {
     newAge = new AgeObject(29, 80);
   });
@@ -69,5 +67,4 @@ describe('lifeExpectancyCalculator', () => {
     let jupiterLifeLeft = jupiterLifeExpectCalc(jAge, 3);
     expect(jupiterLifeLeft).toEqual(1);
   });
-
 });
