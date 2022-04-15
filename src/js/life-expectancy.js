@@ -1,5 +1,3 @@
-import AgeObject from './age-calculator.js';
-
 export const lifeExpectancyCalculator = (age, expectancy) => {
   let lifeLeft = (expectancy - age);
   if (lifeLeft < 0) {
