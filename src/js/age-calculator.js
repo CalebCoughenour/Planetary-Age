@@ -17,5 +17,11 @@ export default class AgeObject {
     return mercuryAge;
   }
   
+  convertToVenusAge() {
+    let venusAge = Math.round(this.days / 225);
+    return venusAge;
+  }
+
+  
 }
 
