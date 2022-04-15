@@ -25,6 +25,12 @@ describe('convertToEarthDays', () => {
     let earthDaysAlive = age.convertToEarthDays();
     expect(earthDaysAlive).toEqual(10585);
   });
+});
 
+describe('convertToMercuryAge', () => {
+  let age;
 
+  beforeEach(() => {
+    age = new AgeObject(29);
+  })
 });
