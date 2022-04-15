@@ -22,5 +22,9 @@ export const mercuryLifeExpectCalc = (mAge, expectancy) => {
 
 export const venusLifeExpectCalc = (vAge, expectancy) => {
   let venusLifeLeft = (expectancy - vAge);
+  if (venusLifeLeft < 0) {
+    let absVenusLife = ("You have lived " + (Math.abs(venusLifeLeft)) + " years past your expectancy!");
+    return absVenusLife;
+  }
   return venusLifeLeft;
 }
