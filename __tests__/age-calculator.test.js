@@ -32,14 +32,15 @@ describe('convertToEarthDays', () => {
   });
 });
 
-// describe('convertToMercuryAge', () => {
-//   let age;
+describe('convertToMercuryAge', () => {
+  let age;
 
-//   beforeEach(() => {
-//     age = new AgeObject(29);
-//   });
+  beforeEach(() => {
+    age = new AgeObject(29);
+  });
 
-//   test('should receive total Earth days alive', () => {
-
-//   });
-// });
+  test('should divide total days alive by days for Mercury rotation(88)', () => {
+    let mercuryAge = age.convertToMercuryAge();
+    expect(mercuryAge).toEqual(120);
+  });
+});
