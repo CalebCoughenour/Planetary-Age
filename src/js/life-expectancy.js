@@ -12,12 +12,12 @@ export const lifeExpectancyCalculator = (age, expectancy) => {
 
 
 export const mercuryLifeExpectCalc = (mAge, expectancy) => {
-    let mercuryLifeLeft = (expectancy - mAge);
-    if (mercuryLifeLeft < 0) {
-      let absMercLife = ("You have lived " + (Math.abs(mercuryLifeLeft)) + " years past your expectancy!");
-      return absMercLife;
-    }
-    return mercuryLifeLeft;
+  let mercuryLifeLeft = (expectancy - mAge);
+  if (mercuryLifeLeft < 0) {
+    let absMercLife = ("You have lived " + (Math.abs(mercuryLifeLeft)) + " years past your expectancy!");
+    return absMercLife;
+  }
+  return mercuryLifeLeft;
 }
 
 export const venusLifeExpectCalc = (vAge, expectancy) => {
@@ -31,5 +31,9 @@ export const venusLifeExpectCalc = (vAge, expectancy) => {
 
 export const marsLifeExpectCalc = (marsAge, expectancy) => {
   let marsLifeLeft = (expectancy - marsAge);
+  if (marsLifeLeft < 0) {
+    let absMarsLife = ("You have lived " + (Math.abs(marsLifeLeft)) + " years past your expectancy!");
+    return absMarsLife;
+  }
   return marsLifeLeft;
 }
