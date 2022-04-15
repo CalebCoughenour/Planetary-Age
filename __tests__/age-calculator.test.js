@@ -59,3 +59,17 @@ describe('convertToVenusAge', () => {
     expect(venusAge).toEqual(47);
   });
 });
+
+describe('convertToMarsAge', () => {
+  let age;
+
+  beforeEach(() => {
+    age = new AgeObject(29);
+  });
+
+  test('should divide total days alive by days for Mars rotation(686.2', () => {
+    age.convertToEarthDays();
+    let marsAge = age.convertToMarsAge();
+    expect(marsAge).toEqual(15);
+  });
+});
