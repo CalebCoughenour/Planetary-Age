@@ -81,9 +81,15 @@ describe('converToSaturnAge', () => {
     age = new AgeObject(29);
   });
 
-  test('should return message if Earth age is less than one Saturn year', () => {
+  test('should convert days alive to Saturn years alive', () => {
     age.convertToEarthDays();
-    let lessThanOneYear = age.convertToSaturnAge();
-    expect(lessThanOneYear).toEqual("You are less than one Saturn year old!");
+    let saturnAge = age.convertToSaturnAge();
+    expect(saturnAge).toEqual(1);
   });
+
+  // test('should return message if Earth age is less than one Saturn year', () => {
+  //   age.convertToEarthDays();
+  //   const underOneYear = age.convertToSaturnAge();
+  //   expect(underOneYear).toEqual("You are less than 1 Saturn year old!");
+  // });
 });
