@@ -1,4 +1,4 @@
-import { lifeExpectancyCalculator, mercuryLifeExpectCalc, venusLifeExpectCalc, marsLifeExpectCalc } from '../src/js/life-expectancy.js';
+import { lifeExpectancyCalculator, mercuryLifeExpectCalc, venusLifeExpectCalc, marsLifeExpectCalc, jupiterLifeExpectCalc } from '../src/js/life-expectancy.js';
 import AgeObject from '../src/js/age-calculator.js';
 
 describe('lifeExpectancyCalculator', () => {
@@ -66,7 +66,7 @@ describe('lifeExpectancyCalculator', () => {
     let testAge = new AgeObject(60, 1); 
     testAge.convertToEarthDays();
     let jAge = testAge.convertToJupiterAge();
-    let jupiterLifeLeft = marsLifeExpectCalc(jAge, 1);
+    let jupiterLifeLeft = jupiterLifeExpectCalc(jAge, 1);
     expect(jupiterLifeLeft).toEqual(1);
   });
 
