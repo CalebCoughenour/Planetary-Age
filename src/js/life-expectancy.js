@@ -1,3 +1,5 @@
+import AgeObject from './age-calculator.js';
+
 export const lifeExpectancyCalculator = (age, expectancy) => {
   let lifeLeft = (expectancy - age);
   if (lifeLeft < 0) {
@@ -5,4 +7,11 @@ export const lifeExpectancyCalculator = (age, expectancy) => {
     return absLifeLeft;
   }
   return lifeLeft;
+}
+
+
+
+export const mercuryLifeExpectCalc = (mAge, expectancy) => {
+    let mercuryLifeLeft = (mAge - expectancy);
+    return mercuryLifeLeft;
 }
