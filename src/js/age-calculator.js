@@ -22,6 +22,9 @@ export default class AgeObject {
     return venusAge;
   }
 
-  
+  convertToMarsAge() {
+    let marsAge = Math.round(this.days / 686);
+    return marsAge;
+  }
 }
 
