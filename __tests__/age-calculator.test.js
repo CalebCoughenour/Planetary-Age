@@ -74,22 +74,16 @@ describe('convertToMarsAge', () => {
   });
 });
 
-describe('converToSaturnAge', () => {
+describe('convertToJupiterAge', () => {
   let age;
 
   beforeEach(() => {
     age = new AgeObject(29);
   });
 
-  test('should convert days alive to Saturn years alive', () => {
+  test('should convert days alive to Jupiter years alive', () => {
     age.convertToEarthDays();
-    let saturnAge = age.convertToSaturnAge();
-    expect(saturnAge).toEqual(1);
+    let jupiterAge = age.convertToJupiterAge();
+    expect(jupiterAge).toEqual(2);
   });
-
-  // test('should return message if Earth age is less than one Saturn year', () => {
-  //   age.convertToEarthDays();
-  //   const underOneYear = age.convertToSaturnAge();
-  //   expect(underOneYear).toEqual("You are less than 1 Saturn year old!");
-  // });
 });
