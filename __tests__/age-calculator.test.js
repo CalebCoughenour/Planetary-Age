@@ -25,12 +25,21 @@ describe('convertToEarthDays', () => {
     let earthDaysAlive = age.convertToEarthDays();
     expect(earthDaysAlive).toEqual(10585);
   });
+
+  test('should push total days alive to age object key this.days', () => {
+    age.convertToEarthDays();
+    expect(age.days).toEqual(10585)
+  });
 });
 
-describe('convertToMercuryAge', () => {
-  let age;
+// describe('convertToMercuryAge', () => {
+//   let age;
 
-  beforeEach(() => {
-    age = new AgeObject(29);
-  })
-});
+//   beforeEach(() => {
+//     age = new AgeObject(29);
+//   });
+
+//   test('should receive total Earth days alive', () => {
+
+//   });
+// });
