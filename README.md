@@ -32,13 +32,13 @@ _This webpage was created for an independent project at Epicodus. It does not ha
 * Open the newly cloned directory named "Planetary-Age"
 * Navigate your terminal to the root directory of the project
 * Run "npm install" in your terminal
-* There is no UI for this page, you can run "npm run test" to check functions/prototypes
+* There is no working UI for this page, you can run "npm run test" to check functions/prototypes
 
 <br>
 
 ## Known Bugs
 
-* No known bugs
+* UI is a work in progress
 
 <br>
 
