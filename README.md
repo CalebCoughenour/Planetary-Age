@@ -20,7 +20,7 @@
 
 ## Description
 
-_This webpage was created for an independent project at Epicodus. It does not have a UI built, only javascript functions and prototypes. The scripts will take a users age and their life expectancy(life expectancy is input by the user). There is a prototype to figure out users age on Mercury, Venus, Earth, Mars & Jupiter. There is also a life expectancy calculator for each planet, this calculates how many years up to the entered expectancy. If age is passed expectancy, output will be how many years passed the expectancy the users age is._
+_This webpage was created for an independent project at Epicodus. The page will take a users age and their life expectancy(life expectancy is input by the user). There is a prototype to figure out users age on Mercury, Venus, Earth, Mars & Jupiter. There is also a life expectancy calculator for each planet, this calculates how many years up to the entered expectancy. If age is passed expectancy, output will be how many years passed the expectancy the users age is._
 
 <br>
 
@@ -32,14 +32,13 @@ _This webpage was created for an independent project at Epicodus. It does not ha
 * Open the newly cloned directory named "Planetary-Age"
 * Navigate your terminal to the root directory of the project
 * Run "npm install" in your terminal
- * The UI is a work in progress, you can run "npm run test" to check functions/prototypes
 * Run "npm run start" to see the current working UI
 
 <br>
 
 ## Known Bugs
 
-* UI is a work in progress
+* No known bugs
 
 <br>
 
