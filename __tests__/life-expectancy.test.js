@@ -67,4 +67,12 @@ describe('lifeExpectancyCalculator', () => {
     let jupiterLifeLeft = jupiterLifeExpectCalc(jAge, 3);
     expect(jupiterLifeLeft).toEqual(1);
   });
+
+  test('should output how many Jupiter years passed life expectancy if a persons jupiter age is more than expectancy', () => {
+    let testAge = new AgeObject(100, 1);
+    testAge.convertToEarthDays();
+    let jAge = testAge.convertToJupiterAge();
+    let jupiterLifeLeft = jupiterLifeExpectCalc(jAge, 1);
+    expect(jupiterLifeLeft).toEqual("You have lived 7 years past you expectancy!")
+  });
 });
