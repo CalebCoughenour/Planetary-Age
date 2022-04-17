@@ -14,7 +14,7 @@ const earthExpectancy = (age, expectancy) => {
   else {
     return lifeExpectancyCalculator(age, expectancy);
   }
-}
+};
 
 const mercuryExpectancy = (age, expectancy) => {
   if (age <= expectancy) {
@@ -23,7 +23,7 @@ const mercuryExpectancy = (age, expectancy) => {
   } else {
     return mercuryLifeExpectCalc(age, expectancy);
   }
-}
+};
 
 const venusExpectancy = (age, expectancy) => {
   if (age <= expectancy) {
@@ -32,7 +32,7 @@ const venusExpectancy = (age, expectancy) => {
   } else { 
     return venusLifeExpectCalc(age, expectancy);
   }
-}
+};
 
 const marsExpectancy = (age, expectancy) => {
   if (age <= expectancy) {
@@ -41,7 +41,7 @@ const marsExpectancy = (age, expectancy) => {
   } else {
     return marsLifeExpectCalc(age, expectancy);
   }
-}
+};
 
 const jupiterExpectancy = (age, expectancy) => {
   if (age <= expectancy) {
@@ -50,8 +50,7 @@ const jupiterExpectancy = (age, expectancy) => {
   } else {
     return jupiterLifeExpectCalc(age, expectancy);
   }
-}
-
+};
 
 
 
@@ -70,7 +69,12 @@ $('#user-input').submit(function(e) {
   $('#mercury-age').text(`Your age on Mercury is ${mercuryAge}`);
   $('#venus-age').text(`Your age on Venus is ${venusAge}`);
   $('#mars-age').text(`Your age on Mars is ${marsAge}`);
-  $('#jupiter-age').text(`Your age on Jupiter is ${jupiterAge}`);
+
+  if (jupiterAge === 0) {
+    $('#jupiter-age').text("You are not even one Jupiter year old!");
+  } else {
+    $('#jupiter-age').text(`Your age on Jupiter is ${jupiterAge}`);
+  }
 
   $('#earth-expectancy').text(earthExpectancy(userInput.age, userInput.expectancy));
   $('#mercury-expectancy').text(mercuryExpectancy(mercuryAge, userInput.expectancy));

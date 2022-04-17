@@ -5,7 +5,7 @@ export const lifeExpectancyCalculator = (age, expectancy) => {
     return absLifeLeft;
   }
   return lifeLeft;
-}
+};
 
 
 
@@ -16,7 +16,7 @@ export const mercuryLifeExpectCalc = (mAge, expectancy) => {
     return absMercLife;
   }
   return mercuryLifeLeft;
-}
+};
 
 export const venusLifeExpectCalc = (vAge, expectancy) => {
   let venusLifeLeft = (expectancy - vAge);
@@ -25,7 +25,7 @@ export const venusLifeExpectCalc = (vAge, expectancy) => {
     return absVenusLife;
   }
   return venusLifeLeft;
-}
+};
 
 export const marsLifeExpectCalc = (marsAge, expectancy) => {
   let marsLifeLeft = (expectancy - marsAge);
@@ -34,9 +34,13 @@ export const marsLifeExpectCalc = (marsAge, expectancy) => {
     return absMarsLife;
   }
   return marsLifeLeft;
-}
+};
 
 export const jupiterLifeExpectCalc = (jAge, expectancy) => {
   let jupiterLifeLeft = (expectancy - jAge);
+  if (jupiterLifeLeft < 0) {
+    let absJupiterLife = ("You have lived " + (Math.abs(jupiterLifeLeft)) + " years past you expectancy!");
+    return absJupiterLife;
+  }
   return jupiterLifeLeft;
-}
+};

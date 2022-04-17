@@ -30,7 +30,7 @@ export default class AgeObject {
 
   convertToJupiterAge() {
     let jupiterAge = Math.round(this.days / 4344);
-    return jupiterAge;
+    return jupiterAge;  
   }
 }
 
