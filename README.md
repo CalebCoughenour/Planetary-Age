@@ -15,6 +15,7 @@
 * _Jquery_
 * _NPM_
 * _Node.js_
+* _Webpack_
 
 <br>
 
@@ -32,6 +33,7 @@ _This webpage was created for an independent project at Epicodus. The page will 
 * Open the newly cloned directory named "Planetary-Age"
 * Navigate your terminal to the root directory of the project
 * Run "npm install" in your terminal
+* By running "npm run test" you will be able to test the business logic functions & prototypes
 * Run "npm run start" to see the current working UI
 
 <br>
